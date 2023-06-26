@@ -20,7 +20,7 @@ Las funcionalidades que van a tener fijas son las opciones de listar productos, 
 
 ### Modelo
 
-![Imgur](https://imgur.com/Cvsi2WT)
+![Imgur]((https://i.imgur.com/Cvsi2WT.png))
 
 ## Alcance Funcional 
 
