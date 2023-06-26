@@ -19,8 +19,8 @@ Las funcionalidades que van a tener fijas son las opciones de listar productos, 
 
 
 ### Modelo
-![imagen del modelo](https://app.diagrams.net/#G1RWyt4OKcoN8GTd4KQJgqbkUnY_ikWzhe)
-* https://app.diagrams.net/#G1RWyt4OKcoN8GTd4KQJgqbkUnY_ikWzhe
+
+![modelo-der]([images/github-logo.png](https://imgur.com/Cvsi2WT))
 
 ## Alcance Funcional 
 
