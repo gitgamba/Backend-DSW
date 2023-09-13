@@ -1,0 +1,35 @@
+### obtener todos los characters
+GET http://localhost:3000/api/modosEnvio
+
+### obtener un character
+GET http://localhost:3000/api/modosEnvio/aa1f5adc-9576-4b22-8771-8116906645ac
+
+
+### crear un nuevo character
+POST http://localhost:3000/api/modosEnvio
+Content-Type: application/json
+
+{
+  "nombre": "Envia a Domicilio",
+  "precio": 500
+}
+
+### modificar un character (PUT - recurso completo e idempotente)
+PUT http://localhost:3000/api/modosEnvio/aa1f5adc-9576-4b22-8771-8116906645ac
+Content-Type: application/json
+
+{
+    "nombre": "Envia domicilio gold",
+    "precio": 800
+}
+
+### modificar un character (PATCH - recurso parcial)
+PATCH http://localhost:3000/api/modosEnvio/f7e471bf-f5cb-4d6c-9308-95f4e0b58f5a
+Content-Type: application/json
+
+{
+    "precio": 600
+}
+
+### borrar un character
+DELETE http://localhost:3000/api/modosEnvio/f7e471bf-f5cb-4d6c-9308-95f4e0b58f5a
