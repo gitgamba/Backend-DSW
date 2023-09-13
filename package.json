@@ -1,5 +1,6 @@
 {
   "name": "backend",
+  "type": "module",
   "version": "1.0.0",
   "description": "backend_del_tp_ecommerce_DDS",
   "main": "index.js",
@@ -17,7 +18,11 @@
   },
   "homepage": "https://github.com/gitgamba/Backend-DSW#readme",
   "devDependencies": {
+    "@types/node": "^20.6.0",
     "tsc-watch": "^6.0.4",
     "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
