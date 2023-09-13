@@ -5,7 +5,9 @@
   "description": "backend_del_tp_ecommerce_DDS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "build": "tsc -p ./tsconfig.json",
+     "start:dev": "tsc-watch --noClear -p ./tsconfig.json --onSuccess \"node ./dist/index.js\""
   },
   "repository": {
     "type": "git",
