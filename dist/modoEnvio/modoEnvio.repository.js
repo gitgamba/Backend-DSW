@@ -1,6 +1,6 @@
 import { modoEnvio } from './modoEnvio.entity.js';
 const modosEnvio = [
-    new modoEnvio('Retiro en sucursal', 11),
+    new modoEnvio('Retiro en sucursal', 500),
 ];
 export class modoEnvioRepository {
     findAll() {

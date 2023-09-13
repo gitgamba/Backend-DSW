@@ -4,7 +4,7 @@ import { modoEnvio } from './modoEnvio.entity.js'
 const modosEnvio = [
   new modoEnvio(
     'Retiro en sucursal',
-    11,
+    500,
   ),
 ]
 
