@@ -22,23 +22,22 @@ function sanitizeCategoriaInput(req: Request, res: Response, next: NextFunction)
 }
 
 //GET
-function findAll(req: Request, res: Response) {
-  res.json({ data: repository.findAll() });
+async function findAll(req: Request, res: Response) {
+  res.json({ data: await repository.findAll() });
 };
 
 //Get X id
-
-function findOne(req: Request, res: Response) {
-  const categoriaEncontrada = repository.findOne({ id: req.params.id });
+async function findOne(req: Request, res: Response) {
+  const categoriaEncontrada = await repository.findOne({ id: req.params.id });
   if (!categoriaEncontrada) {
-    res.status(404).send({ message: 'Categoria no encontrada' });
+    return res.status(404).send({ message: 'Categoria no encontrada' });
   }
   res.json({ data: categoriaEncontrada });
 };
 
 //Post
 
-function add(req: Request, res: Response) {
+async function add(req: Request, res: Response) {
   const input = req.body.sanitizedInput;
 
   const categoriaNueva = new Categoria(
@@ -46,27 +45,28 @@ function add(req: Request, res: Response) {
     input.NombreCategoria
   );
 
-  const categoria = repository.add(categoriaNueva);
+  const categoria = await repository.add(categoriaNueva);
   res.status(201).send({ message: 'Categoria creada', data: Categoria });
 };
 
 //Put actualizar una categoria completa
 
-function update(req: Request, res: Response) {
+async function update(req: Request, res: Response) {
   req.body.sanitizedInput.IdCategoria = req.params.id;
-  const categoria = repository.update(req.body.sanitizedInput);
-
+  req.body.sanitizedInput.NombreCategoria = req.body.NombreCategoria;
+  console.log(req.body.sanitizedInput);
+  const categoria = await repository.update(req.body.sanitizedInput);
+  console.log(categoria);
   if (!categoria) {
     return res.status(404).send({ message: 'Categoria no encontrada' });
   }
-
   return res.status(200).send({ message: 'Categoria actualizada', data: categoria });
 };
 
 //Delete eliminar una categoria
 
-function remove(req: Request, res: Response) {
-  const categoriaID = repository.delete({ id: req.params.id });
+async function remove(req: Request, res: Response) {
+  const categoriaID = await repository.delete({ id: req.params.id });
   if (!categoriaID) {
     res.status(404).send({ message: 'Categoria no encontrada' });
   } else {

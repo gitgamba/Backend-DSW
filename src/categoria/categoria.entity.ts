@@ -1,7 +1,7 @@
 
 export class Categoria {
   constructor(
-    public IdCategoria: any,
+    public IdCategoria: number,
     public NombreCategoria: string
   ) { }
 }

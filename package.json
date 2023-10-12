@@ -27,6 +27,7 @@
     "typescript": "5.2.2"
   },
   "dependencies": {
-    "crypto": "^1.0.1"
+    "crypto": "^1.0.1",
+    "mysql2": "3.6.1"
   }
 }

@@ -10,21 +10,20 @@ POST http://localhost:3000/api/categoria
 Content-Type: application/json
 
 {
-  "IdCategoria": 2,
+  "IdCategoria": 1,
   "NombreCategoria": "telefono"
 }
 
 ### Actualizar una categoría (Tiene que ser idempotente, osea que sin importar los datos tiene que general el mismo resultado)
-PUT http://localhost:3000/api/categoria/1
+PUT http://localhost:3000/api/categoria/10
 Content-Type: application/json
 
 {
   "IdCategoria": 1,
-  "NombreCategoria": "Ventilador"
+  "NombreCategoria": "electro"
 }
-
 ### Actualizar una categoría parcialmente
-PATCH  http://localhost:3000/api/categoria/1
+PATCH  http://localhost:3000/api/categoria/10
 Content-Type: application/json
 
 {
